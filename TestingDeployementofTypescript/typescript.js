@@ -1,12 +1,9 @@
-var Greeter = (function () {
-    function Greeter(greeting) {
-        this.greeting = greeting;
+function isPizza(food) {   // Error: Not all code paths return a value.
+    if (food === "pizza") {
+        return true;
     }
-    Greeter.prototype.greet = function () {
-        return "<h1>" + this.greeting + "</h1>";
-    };
-    return Greeter;
-}());
-;
-var greeter = new Greeter("Hello, world!");
-document.body.innerHTML = greeter.greet();
+    else if (food === "pie") {
+        return true;
+    }
+    // implicitly returns `undefined`
+}
